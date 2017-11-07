@@ -3,7 +3,7 @@
 body {
     background-color: #555555;
     color: #FFFFFF;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -93,12 +93,31 @@ main {
     text-align: center;
 }
 
+.services,
 .services a {
     width: 50%;
 }
 
 .services li:hover {
     background-color: #ee7525;
+}
+
+.services {}
+
+.types {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.type {
+    width: 300px;
+    height: 300px;
+    justify-content: center;
+}
+
+.process ul {
+    list-style: none;
 }
 
 .FAQ {
