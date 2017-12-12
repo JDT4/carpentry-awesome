@@ -27,43 +27,54 @@ a {
     /*color: #ee7525;*/
 }
 
+header {
+    display: flex;
+    justify-content: space-around;
+    background-color: #FFFFFF;
+    margin-top: -0.5em;
+}
+
+.logo {
+    width: 450px;
+    padding: 1em;
+}
+
 nav {
     display: flex;
     flex-direction: row;
-    background-color: #ee7525;
     /*MARGIN ISSUE*/
-    margin-top: -0.5em;
+    margin-top: -1em;
     justify-content: space-around;
     align-items: center;
 }
 
-.logo {
-    width: 4em;
-    padding: 1em;
-    border: 1px solid black;
-    position: relative;
-}
-
-nav h1 {
-    color: #FFFFFF;
-}
-
 nav ul {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     text-align: center;
     padding: 0px;
+    justify-content: space-between;
 }
 
 nav li {
+    background-color: #555555;
     padding: 0.7em;
     display: block;
     justify-content: center;
+    border: 1px solid #ee7525;
+    border-top: 0px;
+    border-radius: 0px 0px 0.3em 0.3em;
+    margin: 0em 1em;
 }
 
 nav a,
 .services a {
     color: #FFFFFF;
+}
+
+nav li:hover {
+    background-color: white;
+    color: black;
 }
 
 main {
@@ -74,6 +85,9 @@ main {
 .firstImage {
     width: 100%;
     background-size: cover;
+    margin-top: -3em;
+    z-index: -1;
+    filter: brightness(50%);
 }
 
 .services ul {
