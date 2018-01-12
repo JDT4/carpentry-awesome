@@ -1,5 +1,3 @@
-/*I'd like to put a transition in this so that it starts off with a black screen and the */
-
 body {
     background-color: #555555;
     color: #FFFFFF;
@@ -7,8 +5,8 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
-    /*MARGIN ISSUE*/
-    margin-left: -0.1em;
+    margin: 0;
+    transition-timing-function: ease;
 }
 
 h1,
@@ -23,144 +21,55 @@ h2 {
     text-decoration: underline;
 }
 
-a {
-    /*color: #ee7525;*/
-}
-
 header {
     display: flex;
-    background-color: #FFFFFF;
-    margin-top: -0.5em;
     flex-direction: column;
-    align-content: space-around;
-}
-
-header img {
-    align-self: center;
+    position: absolute;
+    right: 0;
 }
 
 header .social-links {
-    align-self: flex-end;
-    padding: 0.5em;
+    z-index: 1;
+    margin-top: 0.3em;
 }
 
 header .social-links * {
     padding: 0.15em;
-    margin: 0.1em;
-    font-size: 4vw;
+    font-size: 5vw;
     color: #ee7525;
+    z-index: 1;
 }
 
-.logo {
-    width: 450px;
-    padding: 1em;
-}
-
-nav {
-    display: flex;
-    flex-direction: row;
-    /*MARGIN ISSUE*/
-    margin-top: -1em;
-    justify-content: space-around;
-    align-items: center;
-    box-sizing: border-box;
-}
-
-nav ul {
-    display: flex;
-    flex-direction: row;
-    text-align: center;
-    padding: 0px;
-    justify-content: space-between;
-}
-
-nav li {
-    background-color: #555555;
-    padding: 0.7em;
-    display: block;
-    justify-content: center;
-    border: 1px solid #ee7525;
-    border-top: 0px;
-    border-radius: 0px 0px 0.3em 0.3em;
-    margin: 0em 1em;
-}
-
-nav a,
-.services a {
+header .social-links *:hover {
     color: #FFFFFF;
 }
 
-nav li {
-    transition: height 10s;
+.logo {
+    width: 20em;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    margin: auto;
+    filter: brightness(400%);
 }
 
-nav li:hover {
-    transition-timing-function: ease;
-    background-color: #FFFFFF;
-    color: black;
-    height: 150px;
+.heroImage {
+    width: 100%;
+    background-size: cover;
+    filter: brightness(70%);
 }
 
 main {
-    width: 80%;
-    margin: 0px auto;
-}
-
-.firstImage {
-    width: 100%;
-    background-size: cover;
-    margin-top: -3em;
-    z-index: -1;
-    filter: brightness(50%);
-}
-
-.services ul {
     display: flex;
-    list-style: none;
     flex-direction: column;
-    padding: 0px;
-    justify-content: space-between;
     align-items: center;
-}
-
-.services li {
-    border: 1px solid white;
-    padding: 0.5em;
-    margin: 0.5em;
-    border-radius: 1em;
-    text-align: center;
-}
-
-.services,
-.services a {
-    width: 50%;
-}
-
-.services li:hover {
-    background-color: #ee7525;
-}
-
-.types {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.type {
-    width: 300px;
-    height: 300px;
     justify-content: center;
+    flex: 1;
 }
 
-.process ul {
-    list-style: none;
-}
-
-.FAQ {
-    padding: 0em 1em;
-    border: 3px solid #ee7525;
-    margin: 1em 0em;
-    border-radius: 1em;
+.text {
+    width: 80%;
 }
 
 p {
@@ -168,15 +77,60 @@ p {
     text-align: justify;
 }
 
-footer {
-    height: 1em;
+button {
+    border: 1px solid #ee7525;
+    padding: 1em;
+    border-radius: 0.5em;
     background-color: #ee7525;
+    color: #FFFFFF;
+    font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+}
+
+button:hover {
+    color: #ee7525;
+    background-color: #555555;
+    cursor: pointer;
+}
+
+#mc_embed_signup {
+    width: 80%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#mc_embed_signup input {
+    border-radius: 0.5em;
+    width: 100em;
+    height: 2em;
+    border: none;
+}
+
+footer {
+    background-color: #ee7525;
+    width: 100%;
+    align-self: flex-end;
 }
 
 footer p {
     padding: 1em;
     font-size: 0.7em;
     text-align: center;
+    margin: 0;
+}
+
+@media screen and (min-width: 650px) {
+    .logo {
+        width: 30em;
+    }
+    header .social-links * {
+        font-size: 3vw;
+    }
+    p {
+        font-size: 3vw;
+    }
 }
 
 
@@ -184,6 +138,25 @@ footer p {
 
 @media screen and (min-width: 700px) {
     header .social-links * {
-        font-size: 2vw;
+        font-size: 3vw;
+    }
+    .logo {
+        position: absolute;
+        width: 40em;
+    }
+    .heroImage {
+        max-height: 50vw;
+    }
+    .hidden-text {
+        display: none;
+    }
+    button {
+        margin-top: 1em;
+    }
+    .text {
+        order: 2;
+    }
+    p {
+        font-size: 2.5vw;
     }
 }
