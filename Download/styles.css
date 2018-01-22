@@ -35,7 +35,7 @@ header .social-links {
 
 header .social-links * {
     padding: 0.15em;
-    font-size: 5vw;
+    font-size: 4vw;
     color: #ee7525;
     z-index: 1;
 }
@@ -54,22 +54,94 @@ header .social-links *:hover {
     filter: brightness(400%);
 }
 
-.heroImage {
-    width: 100%;
-    background-size: cover;
-    filter: brightness(70%);
+
+/* Min width of the nav is 500px. Any smaller and we need it to flex-direction row */
+
+nav {
+    display: flex;
+    flex-direction: row;
+    margin-top: -5em;
+    justify-content: space-around;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    padding: 0px;
+    justify-content: space-between;
+    z-index: 1;
+    align-items: stretch;
+}
+
+nav li {
+    background-color: rgba(33, 33, 33, 0.2);
+    padding: 0.7em;
+    display: block;
+    justify-content: center;
+    margin: 0em;
+    min-width: 5em;
+    height: 2.5em;
+}
+
+nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+nav a:hover,
+nav a:visited {
+    color: #FFFFFF;
+    text-decoration: underline;
 }
 
 main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    flex: 1;
+    /*Help*/
 }
 
-.text {
+.heroImage {
+    width: 100%;
+    background-size: cover;
+    margin-top: -3em;
+    filter: brightness(70%);
+    max-height: 100vw;
+    overflow: hidden;
+}
+
+.services {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.template {
+    width: 150px;
+    height: 150px;
+    background-color: antiquewhite;
+    margin: 1em;
+}
+
+.template p {
+    padding: 1em;
+    position: relative;
+    top: 40%;
+    background-color: rgba(33, 33, 33, 0.2);
+}
+
+.text,
+.FAQ {
     width: 80%;
+    margin: 0px auto;
+}
+
+.FAQ {
+    padding: 0em 1em;
+    border: 3px solid #ee7525;
+    margin-bottom: 1em;
+    border-radius: 1em;
 }
 
 p {
@@ -77,41 +149,8 @@ p {
     text-align: justify;
 }
 
-button {
-    border: 1px solid #ee7525;
-    padding: 1em;
-    border-radius: 0.5em;
-    background-color: #ee7525;
-    color: #FFFFFF;
-    font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
-    font-size: 1.5em;
-}
-
-button:hover {
-    color: #ee7525;
-    background-color: #555555;
-    cursor: pointer;
-}
-
-#mc_embed_signup {
-    width: 80%;
-    position: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#mc_embed_signup input {
-    border-radius: 0.5em;
-    width: 100em;
-    height: 2em;
-    border: none;
-}
-
 footer {
     background-color: #ee7525;
-    width: 100%;
-    align-self: flex-end;
 }
 
 footer p {
@@ -125,12 +164,6 @@ footer p {
     .logo {
         width: 30em;
     }
-    header .social-links * {
-        font-size: 3vw;
-    }
-    p {
-        font-size: 3vw;
-    }
 }
 
 
@@ -138,7 +171,7 @@ footer p {
 
 @media screen and (min-width: 700px) {
     header .social-links * {
-        font-size: 3vw;
+        font-size: 2vw;
     }
     .logo {
         position: absolute;
@@ -146,17 +179,5 @@ footer p {
     }
     .heroImage {
         max-height: 50vw;
-    }
-    .hidden-text {
-        display: none;
-    }
-    button {
-        margin-top: 1em;
-    }
-    .text {
-        order: 2;
-    }
-    p {
-        font-size: 2.5vw;
     }
 }
