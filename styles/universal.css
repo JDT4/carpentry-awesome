@@ -45,7 +45,7 @@
     }
     
     nav {
-        display: flex;
+        display: ;
         flex-direction: row;
         margin-top: -5em;
         justify-content: space-around;
@@ -102,6 +102,9 @@
     }
     
     @media screen and (min-width: 650px) {
+        nav {
+            display: flex;
+        }
         header .social-links * {
             font-size: 3vw;
         }
