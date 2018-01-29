@@ -43,6 +43,11 @@
     header .social-links *:hover {
         color: #FFFFFF;
     }
+
+.logo-nav {
+    width:200px;
+    filter: brightness(400%);
+}
     
     nav {
         display: ;
