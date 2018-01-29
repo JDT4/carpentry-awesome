@@ -1,0 +1,147 @@
+body {
+    background-color: #555555;
+    color: #FFFFFF;
+    font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    transition-timing-function: ease;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Muli', sans-serif;
+    color: #ee7525;
+    text-transform: uppercase;
+}
+
+h2 {
+    text-decoration: underline;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+}
+
+header .social-links {
+    z-index: 1;
+    margin-top: 0.3em;
+}
+
+header .social-links * {
+    padding: 0.15em;
+    font-size: 5vw;
+    color: #ee7525;
+    z-index: 1;
+}
+
+header .social-links *:hover {
+    color: #FFFFFF;
+}
+
+.logo {
+    width: 20em;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    margin: auto;
+    filter: brightness(400%);
+}
+
+.heroImage {
+    width: 100%;
+    background-size: cover;
+    filter: brightness(70%);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+.text {
+    width: 80%;
+}
+
+p {
+    padding: 0em;
+    text-align: justify;
+}
+
+button {
+    border: 1px solid #ee7525;
+    padding: 1em;
+    border-radius: 0.5em;
+    background-color: #ee7525;
+    color: #FFFFFF;
+    font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+}
+
+button:hover {
+    color: #ee7525;
+    background-color: #555555;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #ee7525;
+    width: 100%;
+    align-self: flex-end;
+}
+
+footer p {
+    padding: 1em;
+    font-size: 0.7em;
+    text-align: center;
+    margin: 0;
+}
+
+@media screen and (min-width: 650px) {
+    .logo {
+        width: 30em;
+    }
+    header .social-links * {
+        font-size: 3vw;
+    }
+    p {
+        font-size: 3vw;
+    }
+}
+
+
+/*Larger Screens*/
+
+@media screen and (min-width: 700px) {
+    header .social-links * {
+        font-size: 3vw;
+    }
+    .logo {
+        position: absolute;
+        width: 40em;
+    }
+    .heroImage {
+        max-height: 50vw;
+    }
+    .hidden-text {
+        display: none;
+    }
+    button {
+        margin-top: 1em;
+    }
+    .text {
+        order: 2;
+    }
+    p {
+        font-size: 2.5vw;
+    }
+}
