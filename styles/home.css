@@ -54,18 +54,6 @@
                 text-align: justify;
             }
             
-            footer {
-                background-color: #ee7525;
-                width: 100%;
-                align-self: flex-end;
-            }
-            
-            footer p {
-                padding: 1em;
-                font-size: 0.7em;
-                text-align: center;
-                margin: 0;
-            }
             
             @media screen and (min-width: 650px) {
                 .logo {
