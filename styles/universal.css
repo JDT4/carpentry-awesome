@@ -43,6 +43,11 @@
     header .social-links *:hover {
         color: #FFFFFF;
     }
+
+.logo-nav {
+    width:200px;
+    filter: brightness(400%);
+}
     
     nav {
         display: ;
@@ -100,7 +105,18 @@
         max-height: 100vw;
         overflow: hidden;
     }
-    
+    footer {
+                background-color: #ee7525;
+                width: 100%;
+                align-self: flex-end;
+    }
+            
+    footer p {
+                padding: 1em;
+                font-size: 0.7em;
+                text-align: center;
+                margin: 0;
+            }
     @media screen and (min-width: 650px) {
         nav {
             display: flex;

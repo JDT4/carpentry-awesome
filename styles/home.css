@@ -1,86 +1,73 @@
-                .logo {
-                width: 20em;
-                position: absolute;
-                z-index: 1;
-                left: 0;
-                right: 0;
-                margin: auto;
-                filter: brightness(400%);
-            }
-            
-            .services {
-                display: flex;
-                flex-direction: row;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-            
-            .services img:hover {
-                filter: brightness(70%);
-            }
-            
-            .services a {
-                padding: 1em;
-                color: #FFFFFF;
-                text-decoration: none;
-            }
-            
-            .services a:visited {
-                text-decoration: underline;
-            }
-            
-            .services a p {
-                display: inline-block;
-                position: relative;
-                bottom: 40%;
-                right: 50%;
-            }
-            
-            .text,
-            .FAQ {
-                width: 80%;
-                margin: 0px auto;
-            }
-            
-            .FAQ {
-                padding: 0em 1em;
-                border: 3px solid #ee7525;
-                margin-bottom: 1em;
-                border-radius: 1em;
-            }
-            
-            p {
-                padding: 0em;
-                text-align: justify;
-            }
-            
-            footer {
-                background-color: #ee7525;
-                width: 100%;
-                align-self: flex-end;
-            }
-            
-            footer p {
-                padding: 1em;
-                font-size: 0.7em;
-                text-align: center;
-                margin: 0;
-            }
-            
-            @media screen and (min-width: 650px) {
-                .logo {
-                    width: 30em;
-                }
-                /*Larger Screens*/
-                @media screen and (min-width: 700px) {
-                    header .social-links * {
-                        font-size: 3vw;
-                    }
-                    .logo {
-                        position: absolute;
-                        width: 40em;
-                    }
-                    .text {
-                        order: 2;
-                    }
-                }
+    .logo {
+    width: 20em;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    margin: auto;
+    filter: brightness(400%);
+}
+
+.services {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.services img:hover {
+    filter: brightness(70%);
+}
+
+.services a {
+    padding: 1em;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.services a:visited {
+    text-decoration: underline;
+}
+
+.services a p {
+    display: inline-block;
+    position: relative;
+    bottom: 40%;
+    right: 50%;
+}
+
+.text,
+.FAQ {
+    width: 80%;
+    margin: 0px auto;
+}
+
+.FAQ {
+    padding: 0em 1em;
+    border: 3px solid #ee7525;
+    margin-bottom: 1em;
+    border-radius: 1em;
+}
+
+p {
+    padding: 0em;
+    text-align: justify;
+}
+
+@media screen and (min-width: 650px) {
+    .logo {
+        width: 30em;
+    }
+    /*Larger Screens*/
+    @media screen and (min-width: 700px) {
+        header .social-links * {
+            font-size: 3vw;
+        }
+        .logo {
+            position: absolute;
+            width: 40em;
+        }
+        .text {
+            order: 2;
+        }
+    }
